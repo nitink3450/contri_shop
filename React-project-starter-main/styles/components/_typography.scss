@@ -1,0 +1,131 @@
+// @font-face {
+//   font-family: "PPHatton";
+//   src: url("/fonts/PPHatton-Ultralight-200.woff2") format("woff2");
+//   font-weight: 200;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "PPHatton";
+//   src: url("/fonts/PPHatton-Medium-500.woff2") format("woff2");
+//   font-weight: 500;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "PPHatton";
+//   src: url("/fonts/PPHatton-Bold-700.woff2") format("woff2");
+//   font-weight: 700;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "VVSNobleman";
+//   src: url("/fonts/VVS-Nobleman-300.woff2") format("woff2");
+//   font-weight: 300;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "VVSNobleman";
+//   src: url("/fonts/VVS-Nobleman-400.woff2") format("woff2");
+//   font-weight: 400;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "TrajanPro";
+//   src: url("/fonts/TrajanPro-Regular.woff2") format("woff2");
+//   font-weight: 400;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TrajanPro";
+//   src: url("/fonts/TrajanPro-Bold.woff2") format("woff2");
+//   font-weight: 500;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TrajanPro";
+//   src: url("/fonts/TrajanPro-Bold.woff2") format("woff2");
+//   font-weight: 600;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TrajanPro";
+//   src: url("/fonts/Trajan-Pro.woff2") format("woff2");
+//   font-weight: 300;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "LibreBaskerville";
+//   src: url("/fonts/LibreBaskerville-Regular.woff2") format("woff2");
+//   font-weight: 400;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "LibreBaskerville";
+//   src: url("/fonts/LibreBaskerville-Bold.woff2") format("woff2");
+//   font-weight: 700;
+//   font-display: swap;
+// }
+
+.default-heading {
+  font-size: 2.875rem;
+  // font-weight: 700;
+  line-height: 1.1;
+  // color: #fff;
+  @media screen and (max-width: $mobileResolution) {
+    font-size: 2.3rem;
+  }
+  span {
+    color: $primary;
+  }
+  &.h1 {
+    font-size: 5.625rem;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 3.375rem;
+    }
+  }
+  &.h3 {
+    font-size: 2.1rem;
+    line-height: 1.3;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+  &.h4 {
+    font-size: 1.2625rem;
+    @media screen and (max-width: $mobileResolution) {
+    }
+  }
+  &.subheading {
+    font-size: 1.2625rem;
+    text-transform: uppercase;
+    display: block;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 1rem;
+    }
+  }
+}
+p {
+  font-size: 1.125rem;
+  @media screen and (max-width: $mobileResolution) {
+    font-size: 0.875rem;
+  }
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #dbb562 0%, #f4d6b2 122.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

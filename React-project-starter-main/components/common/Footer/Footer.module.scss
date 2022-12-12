@@ -1,0 +1,119 @@
+@import "/styles/variables.scss";
+
+.container {
+  padding: 2rem;
+
+  margin-top: 10rem;
+  padding-top: 4rem;
+
+  @media screen and (max-width: $mobileResolution) {
+    padding: 3.5rem 1rem;
+  }
+
+  .brandContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    align-items: center;
+    margin: 0 auto;
+
+    & + div {
+      max-width: 374px;
+    }
+  }
+  .brandLogo {
+    width: 7rem;
+    display: block;
+    @media screen and (max-width: $mobileResolution) {
+      // margin-bottom: 2rem;
+    }
+  }
+  .logoWrapper {
+    display: inline-block;
+    @media screen and (max-width: $mobileResolution) {
+      max-width: 90px;
+      margin-left: 2rem;
+    }
+  }
+  .links {
+    font-size: 1rem;
+    display: block;
+    letter-spacing: 0.03em;
+    // margin: 0 1rem;
+    margin-bottom: 16px;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 0.9rem;
+      &:last-of-type {
+        // margin-bottom: 0;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-bottom: 0;
+    letter-spacing: 0.02em;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    opacity: 0.4;
+  }
+  .socialWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+
+    .links {
+      margin-right: 0.5rem;
+    }
+
+    .socialLinks {
+      display: inline-flex;
+      flex-direction: row;
+      margin-left: 0.7rem;
+      @media screen and (max-width: $mobileResolution) {
+        margin-top: 0.8rem;
+      }
+      > a {
+        margin: 0 1.5rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $e-black;
+
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  @media screen and (max-width: $mobileResolution) {
+    flex-direction: column;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    .links {
+      margin-top: 6px;
+      a {
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    a {
+      margin-left: 18px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+}
+
+.singleBlock {
+  @media screen and (max-width: $mobileResolution) {
+    margin-top: 2.3rem;
+  }
+}

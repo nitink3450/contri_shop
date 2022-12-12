@@ -1,0 +1,8 @@
+@import "/styles/variables.scss";
+
+.logoWrapper {
+  @media screen and (max-width: $mobileResolution) {
+    width: 5rem;
+    display: inline-block;
+  }
+}

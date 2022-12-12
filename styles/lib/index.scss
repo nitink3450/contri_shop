@@ -1,0 +1,27 @@
+@import "./bootstap-grid.scss";
+@import "./ant-d.scss";
+// @import "node_modules/react-modal-video/scss/modal-video.scss";
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100%;
+  // background: url("http://source.unsplash.com/featured/?nature") no-repeat;
+  // background-size: cover;
+
+  // background-color: #000;
+  overflow: none;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+  }
+}

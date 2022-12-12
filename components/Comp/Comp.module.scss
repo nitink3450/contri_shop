@@ -1,0 +1,43 @@
+@import "/styles/variables.scss";
+
+.container {
+  min-height: 100%;
+  width: 80vw;
+  border: 2px solid $green;
+  @media screen and (max-width: $mobileResolution) {
+    border: 2px solid $red;
+  }
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid blue;
+    // flex-flow: wrap-reverse;
+    .imageWrapper {
+      border: 2px solid $doger;
+      object-fit: cover;
+      background-color: white;
+    }
+    .form {
+      border: 4px solid crimson;
+      height: 100%;
+      width: 100%;
+      .formWrapper {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap-reverse;
+        border: 2px solid greenyellow;
+      }
+    }
+
+    @media screen and (max-width: $mobileResolution) {
+      flex-flow: wrap-reverse;
+    }
+  }
+  .box {
+    margin: 10px;
+    height: 30vw;
+    width: 30vw;
+    background-color: $red;
+    border: 1px solid white;
+  }
+}

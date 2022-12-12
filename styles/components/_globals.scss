@@ -1,0 +1,163 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-default;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // overflow-x: hidden;
+  // font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  // color: #fff;
+  background: #000;
+  &:not(.page-loaded) {
+    // overflow: hidden;
+  }
+}
+
+#__next {
+  overflow-x: hidden;
+}
+
+main {
+  // padding-top: 10rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+.top-spacer {
+  padding-top: 12rem;
+  @media screen and (max-width: $mobileResolution) {
+    padding-top: 4rem;
+  }
+}
+
+#nprogress {
+  z-index: 10000;
+}
+// style for loader
+#nprogress .bar {
+  background: #000 !important;
+  height: 0.2rem;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #000, 0 0 5px #000;
+}
+/* I made these changes in nprogress.css */
+#nprogress .bar {
+  height: 3px;
+}
+#nprogress .spinner-icon {
+  width: 25px;
+  height: 25px;
+  border: solid 3px transparent;
+}
+.ant-collapse {
+  background-color: transparent;
+  border: 1px solid #222222;
+  > .ant-collapse-item {
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.defaut-collapse {
+  .ant-collapse-content {
+    background-color: transparent;
+    color: #fff;
+  }
+  .ant-collapse-header {
+    background-color: transparent;
+    color: #fff !important;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+  &.ant-collapse {
+    > .ant-collapse-item {
+      margin-bottom: 0;
+    }
+  }
+  .anticon {
+    svg {
+      font-size: 1.5rem !important;
+      opacity: 0.7;
+    }
+  }
+}
+
+.newsletter {
+  .ant-form-item-explain-error {
+    color: #fff !important;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    opacity: 0.7;
+  }
+  .ant-form-item-control-input {
+    margin-bottom: 0.7rem;
+  }
+  input {
+    background-color: transparent !important;
+    &:-webkit-autofill {
+      -webkit-text-fill-color: #fff !important;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    // border: 1px solid green;
+    // -webkit-text-fill-color: green;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+.only-desktop {
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
+}
+.only-mobile {
+  @media screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.modal-video-close-btn {
+  cursor: pointer;
+}
+
+.boxed {
+  padding-left: 6vw;
+  padding-right: 6vw;
+  @media only screen and (max-width: $mobileResolution) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

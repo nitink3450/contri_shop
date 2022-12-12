@@ -1,0 +1,67 @@
+@import "/styles/variables.scss";
+
+.container {
+  padding: 2rem 0;
+  @media screen and (max-width: $mobileResolution) {
+    margin-bottom: 50vw;
+  }
+  border: 2px solid $red;
+  .Mwrapper {
+    // border: 2px solid $green;
+    width: 100vw;
+    height: 50vw;
+    .images {
+      // border: 2px solid $doger;
+      //   width: 100vw;
+      //   height: 50vw;
+      display: flex;
+      position: relative;
+      justify-content: center;
+    }
+    .img {
+      //   border: 2px solid rgb(255, 255, 255);
+      position: absolute;
+      height: 65vw;
+      width: 50vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .leftM {
+      left: 0;
+      // transform: skewX(1deg);
+      @media screen and (max-width: $mobileResolution) {
+        left: 1rem;
+        top: -1rem;
+      }
+      z-index: 1;
+      //   .big2{
+      //     transition: all 2s linear 0s;
+      //     transform: scale(2);
+      //   }
+    }
+    .ball {
+      @media screen and (max-width: $mobileResolution) {
+        top: 17vw;
+      }
+      z-index: 0;
+    }
+    .rightM {
+      right: 0;
+      top: 0;
+      @media screen and (max-width: $mobileResolution) {
+        top: 42vw;
+        left: 43vw;
+      }
+      z-index: 3;
+    }
+    .barman {
+      top: 0;
+      @media screen and (max-width: $mobileResolution) {
+        left: 35vw;
+        top: 5vw;
+      }
+      z-index: 2;
+    }
+  }
+}

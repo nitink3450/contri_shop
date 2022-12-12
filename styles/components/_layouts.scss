@@ -1,0 +1,64 @@
+.gradientBg {
+  background: linear-gradient(270deg, #3076ff -20.75%, #52fff4 115.44%);
+}
+
+.gradientBg2 {
+  background: linear-gradient(90deg, #3076ff -15.41%, #52fff4 114.47%);
+}
+
+.c-padding {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.boxed {
+  padding: 0 4vw;
+  @media only screen and (max-width: $mobileResolution) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.bgGray {
+  background: #111111;
+}
+
+.btn-primary {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  background: linear-gradient(270deg, #3076ff -20.75%, #52fff4 115.44%);
+  border-radius: 30px;
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  @media only screen and (max-width: $mobileResolution) {
+    padding: 0.7rem 0.9rem;
+  }
+
+  @media only screen and (max-width: $mobileResolution) {
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 12px;
+    padding: 0.7rem 0.6rem;
+  }
+  a:hover {
+    color: #000;
+  }
+
+  &:hover {
+    background: linear-gradient(270deg, #3076ff -20.75%, #52fff4 115.44%);
+    color: #000;
+  }
+  &:active,
+  &:visited {
+    background: linear-gradient(270deg, #3076ff -20.75%, #52fff4 115.44%);
+    color: #000;
+  }
+}
+
+.white {
+  color: #fff;
+}

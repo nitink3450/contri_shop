@@ -1,0 +1,258 @@
+@import "/styles/variables.scss";
+$ham-menu-res: 1024px;
+
+.container {
+  // background-color: #fff;
+  // font-family: $font-alternate;
+  font-weight: 600;
+  z-index: 1000;
+  // position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: $primary;
+  padding: 1.5rem 3vw;
+  background-color: #141414;
+  @media screen and (max-width: $mobileResolution) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &.hideMenu {
+    .menuItems {
+      visibility: hidden;
+    }
+  }
+
+  .menuWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .hamburgerMenu {
+    cursor: pointer;
+    z-index: 1000;
+    width: 2rem;
+    // margin-right: -10px;
+    display: none;
+    background-image: url("/images/icons/hamburger-menu.svg");
+    background-size: contain;
+    background-position: center;
+    height: 2rem;
+    // margin-top: 1rem;
+    background-repeat: no-repeat;
+    @media screen and (max-width: $ham-menu-res) {
+      display: inline-block;
+    }
+    &.active {
+      background-image: url("/images/icons/menu-close.svg");
+      span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-3px, -1px) !important;
+        // background: #232323;
+        @media screen and (max-width: $mobileResolution) {
+          // transform: rotate(45deg) translate(-5px, -4px) !important;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2) !important;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(0, -1px) !important;
+        }
+      }
+    }
+    span {
+      display: none;
+      width: 25px;
+      height: 2px;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      position: relative;
+      background: #fff;
+      // border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+      &:last-child {
+        transform-origin: 0% 100%;
+      }
+      @media screen and (max-width: $mobileResolution) {
+        // width: 26px;
+        // height: 2px;
+        // margin-bottom: 4px;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-left: 10rem;
+    @media (max-width: $mobileResolution) {
+      justify-content: flex-end;
+      padding-left: 0;
+      justify-content: end;
+    }
+  }
+  .menuItems {
+    display: flex;
+    margin-right: 2rem;
+    @media (max-width: $ham-menu-res) {
+      padding-top: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+      height: 0;
+      -webkit-transition: height 0.2s ease-in;
+      -moz-transition: height 0.2s ease-in;
+      transition: height 0.2s ease-in;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30%;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      z-index: 100;
+      height: 100%;
+      min-height: calc(100vh - 100px);
+      left: -100vw;
+      bottom: 0;
+      transition: all 0.3s ease;
+      top: 100px;
+      background-color: #141414;
+      overflow: auto !important;
+      padding-bottom: 4.5rem;
+      &.active {
+        // height: 350px;
+        transition: all 0.3s ease;
+
+        left: 0vw;
+
+        // box-shadow: 0 9px 5px 2px rgba($primary, 0.1);
+      }
+    }
+
+    @media (max-width: $mobileResolution) {
+      width: 100%;
+    }
+    .item {
+      padding: 1.45rem 1rem;
+      color: $primary;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      transition: all 0.1s ease-in;
+      position: relative;
+      overflow: hidden;
+      font-weight: 500;
+      @media screen and (max-width: 1380px) {
+        padding: 1.45rem 0.8rem;
+      }
+      @media screen and (max-width: $ham-menu-res) {
+        display: block;
+        color: $primary;
+        padding: 0.5rem;
+        padding-left: 1rem;
+        // color: #fff;
+        font-size: 1.2rem;
+        font-family: $font-alternate;
+        margin-bottom: 10px;
+        padding: 1.45rem 0.8rem;
+        &:first-child {
+          margin-top: 3rem;
+        }
+      }
+      @media screen and (max-width: $ham-menu-res) {
+        padding: unset;
+        // margin-bottom: 12px;
+        margin: 0.9rem 1rem;
+        min-height: 30px !important;
+      }
+      &:hover {
+        // letter-spacing: 1px;
+        &::after {
+          // height: 4px;
+          // transform: translateY(0);
+          // opacity: 1;
+        }
+      }
+      &::after {
+        content: "";
+        transform: translateY(100%);
+        width: 100%;
+        height: 4px;
+        background-color: currentcolor;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
+  .social {
+    flex-direction: row;
+    @media screen and (max-width: $mobileResolution) {
+      margin-left: 0.5rem;
+    }
+    a {
+      @media screen and (max-width: $mobileResolution) {
+        // color: #fff !important;
+      }
+    }
+  }
+  .walletbtn {
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 13px !important;
+    }
+  }
+}
+
+.logo {
+  width: 135px;
+  height: 35px;
+  position: relative;
+  @media screen and (max-width: $mobileResolution) {
+    width: 100px;
+    height: 29px;
+  }
+}
+
+.socialWrapper {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  // padding-left: 1rem;
+  @media screen and (max-width: $mobileResolution) {
+    display: flex;
+    border-top: 1px solid #7f7c7c77;
+    padding-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .links {
+    margin-right: 1.2rem;
+  }
+
+  .socialLinks {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 0.7rem;
+    @media screen and (max-width: $mobileResolution) {
+      margin-top: 0.8rem;
+    }
+    > a {
+      margin: 0 1.5rem;
+      font-size: 1.1rem;
+    }
+  }
+}

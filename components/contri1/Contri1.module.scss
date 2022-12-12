@@ -1,0 +1,40 @@
+@import '/styles/variables.scss';
+
+.Contri1_Main{
+    height: auto;
+    // width: auto;
+    // height: 100vh;
+    width: auto;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    .h_100{
+        height: 500px;
+        // border: 2px solid red;
+        width: 100vw;
+        text-align: center;
+    }
+    .h_50{
+        height: 50vh;
+    }
+    .h_25{
+        height: 25vh;
+    }
+    .Image_wrap{
+        border: 1px solid violet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 900px;
+        // transform: scale(1.3);
+        position: fixed;
+        top:100px;
+
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%,-50%);
+    }
+}

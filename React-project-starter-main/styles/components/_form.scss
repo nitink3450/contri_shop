@@ -1,0 +1,161 @@
+.theme-form {
+  .ant-form-item-control {
+    &-input {
+      .ant-input {
+        background: transparent !important;
+        border: 1px solid #fff;
+      }
+    }
+  }
+}
+
+.newsletter {
+  // width: 100%;
+  .ant-input {
+    height: 58px !important;
+  }
+}
+
+.af-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 14px 26px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  // border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  // letter-spacing: 0.02em;
+  // font-weight: 700;
+  color: #d1af65 !important;
+  // border-radius: 50rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  background: #121211;
+  box-shadow: 0px 1px 10px #ddc288;
+  backdrop-filter: blur(14px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 70px;
+  font-size: 12px;
+  font-family: $font-alternate;
+  text-transform: uppercase;
+  justify-content: center;
+
+  @media screen and (max-width: 320px) {
+    font-size: 0.625rem;
+  }
+  &:focus,
+  &:active,
+  &:hover {
+    outline: 0;
+    color: #000;
+  }
+
+  .app-icon {
+    margin-left: 0.6rem;
+  }
+
+  &-bordered {
+    border: 1px solid $primary;
+    color: #fff;
+    background-color: transparent;
+    &:hover,
+    &:active,
+    &:focus {
+      color: #000;
+      background-color: $primary;
+      .app-icon {
+        filter: invert(1);
+      }
+    }
+  }
+  &-primary {
+    background-color: $primary;
+    color: #fff;
+    &:focus,
+    &:active,
+    &:hover {
+      color: #fff;
+      background: $primary;
+    }
+  }
+  &-primary-dark {
+    background-color: $darkBlue;
+    color: #fff;
+    &:focus,
+    &:active,
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-danger {
+    color: $color-danger;
+    border-color: $color-danger;
+    &:hover {
+      color: #fff;
+      background-color: $color-danger;
+      > svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &-rounded {
+    border-radius: 50rem;
+  }
+  &:disabled {
+    background: rgba(255, 255, 255, 0.36);
+    color: rgba(6, 6, 6, 0.6);
+    border-color: rgba(6, 6, 6, 0.05);
+    pointer-events: none;
+    path {
+      fill: rgba(6, 6, 6, 0.2);
+    }
+  }
+  .icon {
+    margin-left: 5px;
+    font-size: 0;
+    width: 1.5rem;
+    @media screen and (max-width: $mobileResolution) {
+      width: 1rem;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.default-form {
+  .ant {
+    &-input {
+      font-family: $font-default;
+      padding: 0.9rem 1rem !important;
+      &,
+      &-affix-wrapper {
+        border-radius: 3rem !important;
+        color: $primary;
+      }
+    }
+  }
+}
+
+::placeholder {
+  opacity: 0.8 !important;
+  @media (max-width: $mobileResolution) {
+    font-size: 1rem;
+  }
+}
